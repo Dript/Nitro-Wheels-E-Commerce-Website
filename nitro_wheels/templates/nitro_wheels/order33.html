@@ -1,0 +1,147 @@
+{% load staticfiles %} 
+
+<html> 
+<head> 
+    <title>Nitro Wheels</title>
+    <link rel="icon" type="image/png" sizes="18x18" href="{% static 'images/title.png' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <div class="header" style="background-color:#B2BABB;">
+            <div class="nav-header" style="background-color:#B2BABB;">
+                <div class="brand-logo">
+                    <img src="{% static '/images/navlogo.png' %}" width=84px 
+                    style="margin: 10px 120px 0px 0px;">
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="header-right">
+                    <ul>
+                        <li class="icons">
+                            <a href="javascript:void(0)">
+                              {% if datab %}
+                                <img src="{{ datab.url }}"  width="45px" alt="pic" class="img-circle">
+                                {% endif%}
+                            </a>
+                            <div class="drop-down dropdown-profile animated bounceInDown" style="margin: -50px -16px 0 0;">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="/nitro_wheels/dash"><i class="icon-power"></i> <span>Profile Page</span></a>
+                                        </li>
+                                        <li><a href="/nitro_wheels/logout"><i class="icon-power"></i> <span>Logout</span></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nk-sidebar">
+            <div class="nav-user">
+                {% if datab %}
+                    <img src="{{ datab.url }}"  alt="" class="img-circle">
+                {% endif%}
+                {% if name %}
+                <h4>{{ name }}</h4>
+                {% endif %}
+                <p>
+                {% if usrname %}
+                {{ usrname }}
+                {% endif %}
+                </p>
+                <div class="nav-user-option">
+                </div>
+            </div>
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <span class="nav-text">Your Order</span> 
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/nitro_wheels/bike/">Bikes</a>
+                            </li>
+                            <li><a href="/nitro_wheels/rep/">Repair Pair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!-- ############################ -->
+        <div class="content-body" style="background-image: url('{% static 'images/back.jpg' %}');">
+            <div class="container-fluid">
+                <div align="center">
+                    <font size="9px" align="center" style="color:white;text-shadow: -4px 2px 5px red;">
+                        All Parts At One Place
+                    </font>
+                </div>
+                <br>
+                <div class="col-sm-2" style="color: white;">
+                    <font size="5px;">Part</font>
+                </div>
+                <div class="col-sm-4">
+                <select id="company" class="form-control" style="width: 150px;">
+                    <option value="gb">Gear Box</option>
+                    <option value="en">Engine</option>
+                    <option value="sp">Spark Plug</option>
+                </select>
+                </div>
+                <div class="col-sm-6" align="right">
+                    <br><br><br><br><br><br>
+                    <button name="next" class="action-button btn btn-success" style="margin: -70px 10px;" id="sub">Search</button>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="col-sm-3">
+                    <img src="{% static 'images/sparkplug/sp1.jpeg' %}">
+                    <table align="center">
+                        <tr>
+                            <td>
+                                Price
+                            </td>
+                            <td>
+                                Rs. 350
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <img src="{% static 'images/sparkplug/sp2.jpeg' %}">
+                    <table align="center">
+                        <tr>
+                            <td>
+                                Price
+                            </td>
+                            <td>
+                                Rs. 300
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright" style="background:black; color: white;">
+                <p>Copyright &copy; Nitro Wheels 2018</p>
+            </div>
+        </div>    
+        </div>        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static '/js/order3.js' %}" ></script>
+        <script type="text/javascript" src="{% static '/js/common.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static '/js/custom.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static '/js/layout.js' %}" ></script>
+</body>
+</html>

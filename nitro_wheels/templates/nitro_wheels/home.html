@@ -1,0 +1,253 @@
+{% load staticfiles %}
+
+<html> 
+<head>
+	<title>Nitro Wheels</title>
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor=#307CF8>
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid navbaritems navbaritemss">
+		<div class="navbar-header" >
+			<a class="navbar-brand imgset">
+				<img src="{% static '/images/navlogo.png' %}"  width=84px>
+			</a>
+		</div>
+		<div class="navbar">
+        	<ul class="nav navbar-nav navbar-right">
+        		<li><a style="color:white;" href="">HOME</a></li>
+ 		        <li><a style="color:white;" href="/nitro_wheels/login/">LOGIN</a></li>
+		        <li><a style="color:white;" href="/nitro_wheels/registration/">SIGNUP</a></li>
+		        <!-- <li><a style="color:white;" href="#">ABOUT US</a></li> -->
+      		</ul>
+    	</div>
+	</div>
+</nav>
+<!--##########################################################-->
+	<div class="container-fluid">
+		<div id="myCarousel" class="carousel slide carousel-inner" data-ride="carousel">
+<!--##########################################################-->
+<!--This is for giving o o o at bottom to switch b/w pics-->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+<!--##########################################################-->
+<!--This is for providing pics-->
+			<div class="item active" align="center" >
+				<img src="{% static '/images/3.png' %}" width="100%">
+			</div>
+			<div class="item" align="center">
+				<img src="{% static '/images/2.png' %}" width="100%">
+			</div>
+			<div class="item" align="center">
+				<img src="{% static '/images/1.png' %}" width="100%">
+			</div>
+
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+<!--This is for giving < button to move to previous pic-->
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+<!--##########################################################-->
+		</div>
+	</div>
+	<div class="container-fluid">
+		
+	</div>
+
+
+
+
+	<div class="container-fluid" style="background-color:#0061EE;">
+		<div class="row" >
+		    <div class="col-sm-4" align="center">
+		    	<br>
+		    	<h3 style="background-color:black; color:white; width:200px;">COMPUTER<br>REPAIR</h3>
+		    	<table style="width:200px;">
+		    		<tr>
+		    			<td><i><b>Hello Friends</i></b></td>
+		    		</tr>
+		    		<tr>
+		    			<td><i><b>Our Company provides all parts and repair every problem related to laptos and computer.</i></b></td>
+		    		</tr>
+		    		<tr align="center">
+		    			<td>
+		    				<a href="/nitro_wheels/login"><button type="button"  class="btn">Click</button></a>
+		    			</td>
+		    		</tr>
+		    	</table>
+		    	<br>
+		    </div>
+		    <div class="col-sm-4" align="center">
+		    	<br>
+		    	<h3 style="background-color:black; color:white; width:200px;">GENUINE SOFTWARES</h3>
+		    	<table width=200px>
+		    		<tr>
+		    			<td><i><b>Hello Friends</i></b></td>
+		    		</tr>
+		    		<tr>
+		    			<td><i><b>Our Company uses only the original softwares provides by the companies.</i></b></td>
+		    		</tr>
+		    		<tr align="center">
+		    			<td>
+		    				<a href="/nitro_wheels/login"><button type="button"  class="btn">Click</button></a>
+		    			</td>
+		    		</tr>
+		    	</table>
+		    	<br>
+		    </div>
+    		<div class="col-sm-4" align="center">
+    			<br>
+    			<h3 style="background-color:black; color:white; width:200px;">INTERNET<br>SERVICES</h3>
+		    	<table width=200px>
+		    		<tr>
+		    			<td><i><b>Hello Friends</i></b></td>
+		    		</tr>
+		    		<tr>
+		    			<td><i><b>Our Company provides all types of connection over any range of area.</i></b></td>
+		    		</tr>
+		    		<tr align="center">
+		    			<td>
+		    				<br>
+		    				<a href="/nitro_wheels/login"><button type="button"  class="btn">Click</button></a>
+		    			</td>
+		    		</tr>
+		    	</table>
+		    	<br>
+    		</div>
+  		</div>
+	</div>
+
+
+
+<!-- ################################################################ -->
+
+
+<div class="container-fluid">
+		<div class="row" >
+		<div class="col-sm-4" align="right">
+			<br>
+			<table border=2 class="tblbor" width=300px height=300px style="margin: 44px 10px;">
+    			<tr style="background-color:#307CF8; color: white">
+    				<td>&nbsp; &nbsp;BEST COMPUTERS</td>
+    			</tr>
+    			<tr style="background-color:black; color: white">
+    				<td>&nbsp; &nbsp;ALL COMPUTER PARTS</td>
+    			</tr>
+    			<tr style="background-color:black; color: white">
+    				<td>&nbsp; &nbsp;CERTIFIED TECHNITIONS</td>
+    			</tr>
+    			<tr style="background-color:black; color: white">
+    				<td>&nbsp; &nbsp;GENUINE SOFTWARES</td>
+    			</tr>
+    			<tr style="background-color:black; color: white">
+    				<td>&nbsp; &nbsp;VIRUS & SOFTWARE REMOVAL</td>
+    			</tr>
+    			<tr style="background-color:black; color: white">
+    				<td>&nbsp; &nbsp;WIRELESS NETWORKING</td>
+    			</tr>
+    		</table>
+    	</div>
+    	<div class="col-sm-4">
+    		<h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUR SERVICES</b></h2>
+    		<table align="center">
+    			<tr>
+    				<td align="left">
+    					<h1>
+    						<span class="glyphicon glyphicon-blackboard sizes"></span> 
+    					</h1>
+    				</td>
+    				<td>
+    					<h3>Best Computers</h3>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td colspan=2>Come to us any buy the best computer for<br>yourself.
+    				</td>
+    			</tr>
+    			<tr>
+    				<td colspan=2>Always ready to help. Just come to our <br>store and buy the best you can.<br></td>
+    			</tr>
+
+    			<tr>
+    				<td>
+    					<h1>
+    						<span class="glyphicon glyphicon-blackboard sizes"></span> 
+    					</h1>
+    				</td>
+    				<td>
+    					<h3>Home Services</h3>
+    				</td>
+    			</tr>
+    			<tr>
+		 			<td colspan=2>We provide all repairing services at your<br>home.</td>
+    			</tr>
+    			<tr>
+    				<td colspan=2>Drop your Address in complaint box and<br>we will be there in an hour to fix your<br>problem.</td>
+    			</tr>
+    		</table>
+    	</div>
+    	<div class="col-sm-4 margg" align="left">
+    		<br><br>
+    		<br>
+    		<table style="margin: 3px 0 0 0;">
+    			<tr>
+    				<td align="left">
+    					<h1>
+    						<span class="glyphicon glyphicon-blackboard sizes"></span> 
+
+    					</h1>
+    				</td>
+    				<td>
+    					<h3>Local Help Centre</h3>
+    				</td>
+    			</tr>
+    			<tr>
+		 			<td colspan=2>Reach our centre near your home. We are<br>always ready to help you.</td>
+    			</tr>
+    			<tr>
+    				<td colspan=2>Always ready to help. Just grab your<br>devices and reach our centre.<br></td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<h1>
+    						<span class="glyphicon glyphicon-blackboard sizes"></span> 
+    					</h1>
+    				</td>
+    				<td>
+    					<h3>Virus & Software Removal</h3>
+    				</td>
+    			</tr>
+    			<tr>
+		 			<td colspan=2>We remove all malacious software and<br>viruses.<br>
+		 			              All genuine Softwares are present.</td>
+    			</tr>
+    		</table>
+    	</div>
+</div>
+	</div>
+
+
+<!-- ################################################################ -->
+
+<div class="copyright">
+    <p style="margin: -6px 5px;">Copyright &copy; Nitro Wheels 2018</p>
+</div>
+	
+
+
+
+
+
+</body>
+</html> 

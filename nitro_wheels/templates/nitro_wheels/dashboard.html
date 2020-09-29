@@ -1,0 +1,194 @@
+{% load staticfiles %}
+
+<html> 
+<head>
+    <title>Nitro Wheels</title>
+    <link rel="icon" type="image/png" sizes="18x18" href="{% static 'images/title.png' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <div class="header" style="background-color:#B2BABB;">
+            <div class="nav-header" style="background-color:#B2BABB;">
+                <div class="brand-logo">
+                    <img src="{% static '/images/navlogo.png' %}" width=84px 
+                    style="margin: 10px 120px 0px 0px;">
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="header-right">
+                    <ul>
+                        <li class="icons">
+                            <a href="javascript:void(0)">
+                                {% if datab %}
+                                    <img src="{{ datab.url }}" width="45px" alt="pic" class="img-circle">
+                                {% endif%}
+                                
+                            </a>
+                            <div class="drop-down dropdown-profile animated bounceInDown" style="margin: -50px -16px 0 0;">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="/nitro_wheels/logout"><i class="icon-power"></i> <span>Logout</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="nk-sidebar">
+            <div class="nav-user">
+                {% if datab %}
+                    <img src="{{ datab.url }}"  alt="" class="img-circle">
+                {% endif%}
+                {% if name %}
+                <h4>{{ name }}</h4>
+                {% endif %}
+                <p>
+                {% if usrname %}
+                {{ usrname }}
+                {% endif %}
+                </p>
+                <div class="nav-user-option">
+                </div>
+            </div>
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow" href="/nitro_wheels/edit" aria-expanded="false">
+                            <span class="nav-text">Edit Profile</span> 
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <span class="nav-text">Your Order</span> 
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/nitro_wheels/bike/">Bikes</a>
+                            </li>
+                            <li><a href="/nitro_wheels/rep/">Repair Pair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!-- ############################ -->
+        <div class="content-body">
+            <div class="container-fluid" style="background-image:url({% static '/images/editback.jpg' %});">
+            <!-- <div class="container-fluid" style="background: linear-gradient(blue,white,violet); ">-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="profile">
+                            <div class="profile-head">
+                                <div class="photo-content">
+                                    <div class="cover-photo">
+                                        <img src="{% static '/images/cover2.jpg' %}" height=45%  width=100%>
+                                    </div>
+                                    <div class="profile-photo" style="margin: 0px 0px 10px -476px;">
+                                        {% if datab %}
+                                        <img src="{{ datab.url }}"  width="150px" alt="pic" class="img-circle">
+                                        {% endif%}
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br><br>
+                <div>
+                    <table align="left" class="colorss">
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">Name-</h3>
+                            </td>
+                            <td>
+                                <i>{% if name %}
+                                   {{ name }}
+                                   {% endif %}</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">D.O.B-</h3>
+                            </td>
+                            <td>
+                                <i>{% if dob %}
+                                   {{ dob }}
+                                   {% endif %}</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">Contact No.-</h3>
+                            </td>
+                            <td>
+                                <i>{% if number %}
+                                   {{ number }}
+                                   {% endif %}</i>
+                            </td>
+                        </tr>
+                    </table> 
+                    <table align="center" class="colorss">
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">Email-</h3>
+                            </td>
+                            <td>
+                                <i>{% if email %}
+                                   {{ email }}
+                                   {% endif %}</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">Address-</h3>
+                            </td>
+                            <td>
+                                <i>{% if add %}
+                                   {{ add }}
+                                   {% endif %}</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="padding: 0px 2px 13px 0px;color: white;">License No.-</h3>
+                            </td>
+                            <td >
+                                    <h3 style="color: white;margin: -10px 0 0 2px;">
+                                        {% if status %}
+                                        {{ status }}
+                                        {% endif %}
+                                    </h3>
+                     </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+            </div>
+        <div class="footer">
+            <div class="copyright" style="background-color:black;  color: white;  ">
+                <p>Copyright &copy; Nitro Wheels 2018</p>
+            </div>
+        </div>    
+        </div>
+
+
+
+
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static '/js/dashboard.js' %}" ></script>
+    <script type="text/javascript" src="{% static '/js/common.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static '/js/custom.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static '/js/layout.js' %}" ></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.navbaritems
+{
+	height:55px;
+}
+.imgset
+{
+	margin: -6px 0px 0px 8px;
+	
+}
+.navbaritemss
+{
+	height:55px;
+	background-color:#B2BABB;
+}
+.navy
+{
+	background-color:#D5DBDB  ;
+}
+.backy
+{
+	background-color: linear-gradient(blue,white,violet);
+}
+.copyright
+{
+	background-color: black;
+	color: white;
+	height: 5px;
+	padding: 25px;
+	margin :auto;
+	
+}
+.sss
+{
+	
+	padding: 10px 0 0 0;
+}
+.navsettings
+{
+	color: white;
+}
+.colorss
+{
+	color: white;
+}
