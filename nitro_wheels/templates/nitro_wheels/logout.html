@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<html> 
+<head>
+	<title>Nitro Wheels</title>
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="grey">
+		<div class="container-fluid navbaritemss">
+			<div class="navbar-header" >
+				<a class="navbar-brand imgset">
+					<img src="{% static '/images/navlogo.png' %}"  width=84px>
+				</a>
+			</div>
+		</div>
+	<div class="container-fluid navy">
+		<h4>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/nitro_wheels/home">Home</a>
+		</h4>
+	</div>
+	<div class="container-fluid">
+		<br>
+		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logged Out</h4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanks For Using Our Website.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Be Back Soon.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/nitro_wheels/login">Login Again</a> 
+	</div>
+	
+	
+</body>
+</html>
