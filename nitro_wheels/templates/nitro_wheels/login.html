@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Nitro Wheels</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body background="{% static 'images/login.jpg' %}">
+    <p align="right" style="color:white;" >Back to <a style="color:white;" href="/nitro_wheels/home">Home</a></p>
+    <form id="msform">
+        <div class="len">    
+        </div>
+        <fieldset>
+            <h1 class="fs-title">login</h1>
+            <input id="usrname" type="text" name="usrname" placeholder="Username" />
+            <input id="pass" type="password" name="pass" placeholder="Password" />
+            <button name="next" class="action-button" id="sub">Submit</button>              
+            <br>Create an Account <a href="/nitro_wheels/registration/">Click Here</a>
+        </fieldset>
+    </form>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static '/js/login.js' %}" ></script>
+</body>
+</html>
+
+
+
